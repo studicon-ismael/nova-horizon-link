@@ -19,7 +19,7 @@ class HorizonLink extends Tool
     }
 
     /**
-     * Create link with _Horizon_ logo
+     * Create link with _Horizon_ logo.
      */
     public static function useLogo(): self
     {

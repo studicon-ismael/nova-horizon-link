@@ -4,7 +4,7 @@
 <p align="center">Smart Link to <strong>Laravel Horizon Dashboard</strong> from <strong>Laravel Nova</strong></p>
 <p align="center">
     <a href="https://packagist.org/packages/mad-web/nova-horizon-link"><img src="https://img.shields.io/packagist/v/mad-web/nova-horizon-link.svg" alt="Latest Stable Version"></a>
-    <a href="https://styleci.io/repos/100302581"><img src="https://styleci.io/repos/100302581/shield?style=flat" alt="Code Style Status"></a>
+    <a href="https://styleci.io/repos/154735438"><img src="https://styleci.io/repos/154735438/shield?style=flat" alt="Code Style Status"></a>
     <a href="https://packagist.org/packages/mad-web/nova-horizon-link"><img src="https://img.shields.io/packagist/dt/mad-web/nova-horizon-link.svg" alt="Quality Score"></a>
     <a href="LICENSE.md"><img src="https://img.shields.io/badge/license-MIT-brightgreen.svg" alt="Software License"></a>
 </p>
