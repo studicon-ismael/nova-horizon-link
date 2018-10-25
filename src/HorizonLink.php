@@ -28,6 +28,10 @@ class HorizonLink extends Tool
         view()->composer(self::VIEW_NAME, function ($view) {
             $view->with('label', $this->label);
         });
+
+        $this->canSee(function ($request) {
+            return Horizon::check($request);
+        });
     }
 
     /**
