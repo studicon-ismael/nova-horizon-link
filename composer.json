@@ -1,0 +1,43 @@
+{
+    "name": "mad-web/nova-horizon-link",
+    "description": "Smart Link for Laravel Nova to Horizon Dashboard.",
+    "type": "library",
+    "keywords": [
+        "laravel",
+        "nova",
+        "horizon",
+        "link"
+    ],
+    "homepage": "https://github.com/mad-web/nova-horizon-link",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mad Web",
+            "email": "madweb.dev@gmail.com",
+            "homepage": "https://github.com/mad-web",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "laravel/horizon": "^1.0",
+        "laravel/nova": "*",
+    },
+    "autoload": {
+        "psr-4": {
+            "MadWeb\\NovaHorizonLink\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MadWeb\\NovaHorizonLink\\LinkServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
