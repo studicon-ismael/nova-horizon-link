@@ -21,7 +21,7 @@
     "require": {
         "php": ">=7.1.0",
         "laravel/horizon": "^1.0",
-        "laravel/nova": "*",
+        "laravel/nova": "*"
     },
     "autoload": {
         "psr-4": {
