@@ -8,22 +8,16 @@ use Laravel\Horizon\Horizon;
 class HorizonLink extends Tool
 {
     protected $label;
+    protected $target;
 
     const VIEW_NAME = 'nova-horizon-link::navigation';
 
-    public function __construct(?string $label = 'Horizon Queues')
+    public function __construct(?string $label = 'Horizon Queues', string $target = 'self')
     {
         parent::__construct();
 
         $this->label = $label;
-    }
-
-    /**
-     * Create link with _Horizon_ logo.
-     */
-    public static function useLogo(): self
-    {
-        return new static(null);
+        $this->target = $target;
     }
 
     /**
@@ -35,6 +29,7 @@ class HorizonLink extends Tool
     {
         view()->composer(self::VIEW_NAME, function ($view) {
             $view->with('label', $this->label);
+            $view->with('target', $this->target);
         });
 
         $this->canSee(function ($request) {
@@ -50,5 +45,20 @@ class HorizonLink extends Tool
     public function renderNavigation()
     {
         return view(self::VIEW_NAME);
+    }
+
+    public function target(string $target)
+    {
+        $this->target = $target;
+
+        return $this;
+    }
+
+    /**
+     * Create link with _Horizon_ logo.
+     */
+    public static function useLogo(string $target = 'self'): self
+    {
+        return new static(null, $target);
     }
 }

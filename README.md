@@ -82,6 +82,45 @@ public function tools()
 }
 ```
 
+If you need to customize link `target` attribute (for example to open a page in a new tab), just pass it as second parameter into constructor or as first parameter into `useLogo` method.
+A value should be without prepended underscore `_`:
+
+```php
+// app/Providers/NovaServiceProvider.php
+
+// ...
+
+public function tools()
+{
+    return [
+        // ...
+
+        new \MadWeb\NovaHorizonLink\HorizonLink('Horizon Queues', 'blank'),
+        // or
+        \MadWeb\NovaHorizonLink\HorizonLink::useLogo('blank'),
+    ];
+}
+```
+
+If you prefer to use _Fluent Interface_:
+
+```php
+// app/Providers/NovaServiceProvider.php
+
+// ...
+
+public function tools()
+{
+    return [
+        // ...
+
+        \MadWeb\NovaHorizonLink\HorizonLink::make()->target('blank'),
+        // or
+        \MadWeb\NovaHorizonLink\HorizonLink::useLogo()->target('blank'),
+    ];
+}
+```
+
 ## Contributing
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) and [CONDUCT](CONDUCT.md) for details.
