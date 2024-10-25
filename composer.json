@@ -19,8 +19,8 @@
         }
     ],
     "require": {
-        "php": ">=7.1.0",
-        "laravel/horizon": "^1.0|^2.0|^3.0",
+        "php": "^8.0",
+        "laravel/horizon": "^5.0",
         "laravel/nova": "*"
     },
     "autoload": {
